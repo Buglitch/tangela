@@ -1,0 +1,17 @@
+{
+  "name": "tangela",
+  "version": "1.0.0",
+  "description": "a modular discord bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Buglitch",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0"
+  }
+}

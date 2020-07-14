@@ -1,0 +1,36 @@
+{
+    "name": "Chang 2.0",
+    "picture": "chang.png",
+    "symbol": "💠 ",
+    "color": "#8B92C7",
+    "token": {
+        "encrypted": "533faa57f93a681dcbf4bfcc83e0c8ddb623774f99e297097478c0b9dba1d4bf43aba744f821c250fdeac44673815a7a40dad80dcf1cb556cb1692055ca5948f",
+        "encrypted_hash": "4ece8dd7b09ef25cce3be97ca2dd724052e310198a4feef4b87d5f2da6916e1cf77c4b3d4bfbea6c0b974356c0f54e3e"
+    },
+    "commands": [
+        "accent",
+        "choose",
+        "echo",
+        "flandre",
+        "help",
+        "picture",
+        "project",
+        "roll",
+        "tableau",
+        "vote"
+    ],
+    "filters": [
+        "delirium",
+        "chang",
+        "perma",
+        "tom",
+        "blagues",
+        "pamal"
+    ],
+    "reactions": [
+        null,
+        "🇹🇬",
+        "💠",
+        "👍"
+    ]
+}

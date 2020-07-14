@@ -1,0 +1,42 @@
+{
+    "env": {
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "array-bracket-spacing": ["error", "never"],
+        "arrow-parens": ["error", "always"],
+        "brace-style": ["error", "1tbs"],
+        "comma-dangle": ["error", {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "never"
+            }
+        ],
+        "curly": ["error", "multi-or-nest", "consistent"],
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "max-len": ["error", { "code": 80, "ignoreUrls": true, "ignoreStrings": true }],
+        "no-multi-spaces": ["error"],
+        "no-multiple-empty-lines": ["error"],
+        "no-tabs": "error",
+        "no-var": ["error"],
+        "object-curly-spacing": ["error", "always"],
+        "operator-linebreak": ["error", "before", { "overrides": { "=": "after" } }],
+        "prefer-const": ["error"],
+        "quote-props": ["error", "consistent"],
+        "quotes": ["error", "double", { "avoidEscape": true }],
+        "semi": ["error", "never"]
+    }
+}

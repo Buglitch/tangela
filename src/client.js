@@ -18,8 +18,13 @@ module.exports.init = (context, fun) => {
         client.user.setAvatar(`img/${config.picture}`)
             .catch(Logger.catch("avatar"))
 
-        client.user.setPresence({ status: "online" })
-            .catch(Logger.catch("presence"))
+        client.user.setPresence({
+            status: "online",
+            activity: {
+                name: `${config.symbol} help`,
+                type: "PLAYING",
+            },
+        }).catch(Logger.catch("presence"))
 
         context.info = {
             user: client.user.id,

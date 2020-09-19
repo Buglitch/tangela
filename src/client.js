@@ -1,6 +1,7 @@
 // @src/client.js
 
 // requirement
+const Database = require("../src/database.js")
 const Discord = require("discord.js")
 const Logger = require("../lib/logger.js")
 
@@ -66,11 +67,29 @@ module.exports.loop = (fun) => {
                 ).catch(Logger.catch("answer_file")),
 
             delete: () =>
-                msg.delete(),
+                msg.delete()
+                    .catch(Logger.catch("delete")),
 
             react: (reaction) =>
                 msg.react(reaction)
                     .catch(Logger.catch("react")),
+
+            get_user_info: (id) => {
+                const user = client.users.cache.get(id)
+                if (!user)
+                    return null
+                return {
+                    id: user.id,
+                    username: user.username,
+                    avatar: user.avatarURL(),
+                }
+            },
+
+            save_db: (id, json) =>
+                Database.save_db(id, json),
+
+            load_db: (id) =>
+                Database.load_db(id),
         }
 
         fun(str, info, funcs)

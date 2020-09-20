@@ -63,7 +63,7 @@ module.exports.loop = (fun) => {
 
             answer_file: (str, file, name) =>
                 msg.channel.send(
-                    str, file ? new Discord.Attachment(file, name) : null
+                    str, file ? new Discord.MessageAttachment(file, name) : null
                 ).catch(Logger.catch("answer_file")),
 
             delete: () =>

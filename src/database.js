@@ -3,9 +3,6 @@
 // requirement
 const Fs = require("fs")
 
-// constant
-const db_path = "./database"
-
 // function
 function init_db(path, id) {
     if (!Fs.existsSync(path))
@@ -21,12 +18,12 @@ function init_db(path, id) {
     return json_path
 }
 
-module.exports.save_db = (id, json) => {
+module.exports.save_db = (db_path, id, json) => {
     const path = init_db(db_path, id)
     Fs.writeFileSync(path, JSON.stringify(json, null, 4))
 }
 
-module.exports.load_db = (id) => {
+module.exports.load_db = (db_path, id) => {
     const path = init_db(db_path, id)
     return JSON.parse(Fs.readFileSync(path))
 }

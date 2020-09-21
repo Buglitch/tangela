@@ -10,7 +10,7 @@ module.exports.start = (context) => {
         Logger.log("logged in")
     })
 
-    Client.loop((str, info, funcs) => {
+    Client.loop(context, (str, info, funcs) => {
         // commands
         const symbol = context.config.symbol.trim()
         if (str.substring(0, symbol.length) === symbol) {

@@ -65,6 +65,7 @@ module.exports.parse_config = (argv) => {
         picture: config.picture,
         symbol: config.symbol,
         color: config.color,
+        database: config.database,
         token: token,
         commands: config.commands,
         filters: config.filters,

@@ -45,10 +45,11 @@ module.exports.exec = (argv, info, funcs, meta) => {
         const key = argv[1].toUpperCase()
         const user_data = funcs.load_db(info.author)
         if (user_data[key])
-            return 1
-        user_data[key] = 1
+            user_data[key] += 1
+        else
+            user_data[key] = 1
         funcs.save_db(info.author, user_data)
-        return 0
+        return 3
     } else if (argv.length >= 3) {
         const key = argv[1].toUpperCase()
         if (!/^-?\d+$/.test(argv[2]))
@@ -61,7 +62,7 @@ module.exports.exec = (argv, info, funcs, meta) => {
         if (user_data[key] === 0)
             delete user_data[key]
         funcs.save_db(info.author, user_data)
-        return 0
+        return 3
     }
 
     return 1

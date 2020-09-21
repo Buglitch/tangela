@@ -35,7 +35,8 @@ module.exports.init = (context, fun) => {
     })
 }
 
-module.exports.loop = (fun) => {
+module.exports.loop = (context, fun) => {
+    const config = context.config
     client.on("message", (msg) => {
         // raw message
         const str = msg.content
@@ -86,10 +87,10 @@ module.exports.loop = (fun) => {
             },
 
             save_db: (id, json) =>
-                Database.save_db(id, json),
+                Database.save_db(config.database, id, json),
 
             load_db: (id) =>
-                Database.load_db(id),
+                Database.load_db(config.database, id),
         }
 
         fun(str, info, funcs)

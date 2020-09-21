@@ -3,6 +3,7 @@
     "picture": "chang.png",
     "symbol": "💠 ",
     "color": "#F19963",
+    "database": "../database",
     "token": {
         "encrypted": "698a873dfcb6cc9d29c94f681329737e1bc0d1ce780371adf4167d6e52dc0e0554b85d5ebfb356879e91482b2281e84fe598349d4118d8feb17f7b85dac711da",
         "encrypted_hash": "58f4226c36095173f23b4463053460eb4c7de1739c3d8a3d7883de8de100e1ea5181741ec6b1afe6ee7d18eecea82291"
